@@ -4,3 +4,6 @@ build/
 .cache/
 .DS_Store
 .idea/
+./code
+cmake-build-debug
+test/
