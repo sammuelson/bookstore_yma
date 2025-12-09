@@ -1,1 +1,6 @@
 requirements.md
+build/
+**/*.o
+.cache/
+.DS_Store
+.idea/
