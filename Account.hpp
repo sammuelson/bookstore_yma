@@ -37,9 +37,14 @@ struct Accout {    // 单个账户。
     }
 };
 
+struct LogIn {    // todo：用于实现在主控中的登陆情况管理。
+    char userid [31];
+    int privilege;
+    char select_book [21];
+};
 
-class User {
-    Accout accounts_[2000];    // todo 块链
+struct User {    // todo：文件读写。
+    Accout accounts_[2000];    // todo：块链
     long long account_num_;    // 账户个数。
     Accout crt_account_[2000];    // todo：当前登录的账户（个数？）
     long long crt_account_num_;    // 当前登录的账户个数。
@@ -90,7 +95,7 @@ class User {
         return true;    // 密码正确。
     }
 
-    // 登出。
+    // 登出。    // todo:可以迁移到主控文件。
     bool LogOut() {
         if (crt_account_num_ < 1) {
             cout << "Invalid\n";
@@ -225,7 +230,7 @@ class User {
         return true;
     }
 
-    bool DeleteUser(int priv = 0) {
+    bool DeleteUser(int priv = 0) {    // todo:可以迁移到主控文件。
         string id;
         cin >> id;
         if (priv < 7) {
