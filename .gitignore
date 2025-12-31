@@ -7,3 +7,4 @@ build/
 ./code
 cmake-build-debug
 test/
+previa/
